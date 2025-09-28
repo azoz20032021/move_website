@@ -33,7 +33,11 @@ export default function MovieDetail() {
 
   return (
     <div className="details">
-      <Link to="/" className="back">⬅ Back</Link>
+      {window.location.pathname === `/movie/${id}` ? (
+        <Link to="/">⬅ Back</Link>
+      ) : (
+        <Link to="/Popular">⬅ Back</Link>
+      )}
 
       <div className="details-layout">
         {movie.poster_path && (

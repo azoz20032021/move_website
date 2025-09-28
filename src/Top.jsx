@@ -6,7 +6,7 @@ import axios from "axios";
 const TOKEN =
   "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMWVkYWUyMjMyMTUzZGYxYTMyMzQ4ZDQ2ZDliNDkwMiIsIm5iZiI6MTc1NTM4NjYxNS4yNDE5OTk5LCJzdWIiOiI2OGExMTJmNzlkMDJmOTc3ZTc2MzIyNWIiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.HRz3aWh4jKsGN2JWkvo9pCAbA6u01d5v_ue6EEXEAAA";
 
-export default function Home() {
+export default function Top() {
   const [movies, setMovies] = useState([]);
   const [query, setQuery] = useState("");
   const [menuOpen, setMenuOpen] = useState(false);
@@ -21,7 +21,8 @@ export default function Home() {
         if (query.trim()) {
           url = `https://api.themoviedb.org/3/search/movie?query=${encodeURIComponent(query)}&language=en-US&page=${page}`;
         } else {
-          url = `https://api.themoviedb.org/3/trending/movie/week?language=en-US&page=${page}`;
+          url = `https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=${page}`;
+
         }
 
         const res = await axios.get(url, {

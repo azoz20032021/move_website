@@ -52,7 +52,7 @@
 
 @media (max-width: 768px) {
   .hamburger {
-    display: block; 
+    display: block;
   }
 
   .menu {
@@ -112,4 +112,11 @@
 
 @media (max-width: 700px) {
   .details-layout { grid-template-columns: 1fr; }
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin: 20px 0;
 }
