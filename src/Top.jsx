@@ -54,11 +54,12 @@ export default function Top() {
   sx={{
     display: { xs: "block", md: "none" }, 
     position: "absolute",
-    top: 4,
+    top: 3,
     left: 10,
     zIndex: 10,
     bgcolor: "background.paper",
-    boxShadow: 2,
+    color: "#352befa5",
+    boxShadow: 1,
     "&:hover": {
       bgcolor: "primary.light",
       color: "white",
