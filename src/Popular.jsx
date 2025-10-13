@@ -34,8 +34,8 @@ export default function Popular() {
             Authorization: TOKEN,
           },
         });
-
-        setMovies(res.data.results || []);
+        const filtermovies = res.data.results.filter(movie => movie.adult  === false);
+        setMovies(filtermovies);
         setTotalPages(res.data.total_pages || 1);
       } catch (err) {
         console.error("Axios error:", err);
