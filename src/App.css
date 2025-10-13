@@ -236,6 +236,18 @@
   .similar-poster { aspect-ratio: 2 / 3; max-height: 220px; }
 }
 
+/* Very small screens: make posters square and compact */
+@media (max-width: 480px) {
+  .similar-slider { padding: 6px 6px; }
+  .similar-card { padding: 6px 6px; }
+  .similar-card a { padding: 6px; }
+  /* rectangular posters like the rest of the app */
+  .similar-poster { aspect-ratio: 2 / 3; border-radius: 8px; max-height: 260px; }
+  .similar-title { display: block; font-size: 12px; margin-top: 6px; }
+  .similar-section { padding: 8px; }
+  .similar-slider .slick-slide { padding: 4px; }
+}
+
 @media (max-width: 412px) {
   .movie-grid {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));

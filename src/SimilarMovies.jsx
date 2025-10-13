@@ -56,7 +56,8 @@ export default function SimilarMovies({ movieId }) {
       },
       {
         breakpoint: 480,
-        settings: { slidesToShow: 1, slidesToScroll: 1 },
+        // on very small screens show 3 larger rectangular posters
+        settings: { slidesToShow: 3, slidesToScroll: 1, arrows: true, autoplay: false },
       },
     ],
   };
