@@ -54,11 +54,11 @@ export default function Home() {
   sx={{
     display: { xs: "block", md: "none" }, 
     position: "absolute",
-    top: 3,
+    top: 2.7,
     left: 10,
     zIndex: 10,
     bgcolor: "background.paper",
-    color: "#352befa5",
+    color: "black",
     boxShadow: 1,
     "&:hover": {
       bgcolor: "primary.light",
@@ -127,7 +127,7 @@ export default function Home() {
         <Button
           variant="solid" color="primary"
           disabled={page === 1}
-          onClick={() => setPage((prev) => prev - 1)}
+          onClick={() => { setPage((prev) => prev - 1); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
         >
           ⬅ Previous
         </Button>
@@ -139,7 +139,7 @@ export default function Home() {
         <Button
         variant="solid" color="primary"
           disabled={page === totalPages}
-          onClick={() => setPage((prev) => prev + 1)}
+          onClick={() => { setPage((prev) => prev + 1); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
         >
           Next ➡
         </Button>
