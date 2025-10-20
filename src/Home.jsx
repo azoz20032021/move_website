@@ -54,7 +54,7 @@ export default function Home() {
   sx={{
     display: { xs: "block", md: "none" }, 
     position: "absolute",
-    top: 2,
+    top: 1.67,
     left: 10,
     zIndex: 10,
     bgcolor: "white",
