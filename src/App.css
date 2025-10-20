@@ -228,19 +228,14 @@
 .similar-title { text-align: center; font-size: 13px; margin-top: 8px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .slick-prev, .slick-next { z-index: 10; }
 
-@media (max-width: 768px) {
-  .similar-poster { aspect-ratio: 2 / 3; max-height: 220px; }
-}
 
 @media (max-width: 480px) {
-  .similar-slider { padding: 6px 6px; }
-  .similar-card { padding: 6px 6px; }
-  .similar-card a { padding: 6px; }
-  /* rectangular posters like the rest of the app */
-  .similar-poster { aspect-ratio: 2 / 3; border-radius: 8px; max-height: 260px; }
-  .similar-title { display: block; font-size: 12px; margin-top: 6px; }
-  .similar-section { padding: 8px; }
-  .similar-slider .slick-slide { padding: 4px; }
+  .similar-slider { padding: 0px; width: 100%;overflow: hidden;}
+  .similar-card { padding: 0px; }
+  .similar-card a { padding: 3px; }
+  .similar-poster { width: 100%;height: 100%; }
+  .similar-title {  font-size: 12px; margin-top: 6px; }
+  .similar-section { padding: 0px; }
 }
 
 @media (max-width: 412px) {
@@ -275,9 +270,7 @@
 }
 .similar-container {
   width: 100%;
-  max-width: 900px;
-  margin: 18px auto 40px;
-  padding: 0 16px;
+  max-width: 100%;
 }
 
 .details-meta {
@@ -288,9 +281,9 @@
   color: #333;
   font-size: 0.95rem;
 }
-.details-meta p { margin: 0; }
+.details-meta p { margin: 0px; }
 
-.genre-list { display: inline-flex; gap: 8px; flex-wrap: wrap; margin-left: 8px;
+.genre-list { display: inline-flex; gap: 8px; flex-wrap: wrap; margin-left: 0px;margin-top: 5px;
   position: relative;
   top: -2px;}
 .genre-badge {

@@ -53,15 +53,15 @@ export default function Popular() {
   sx={{
     display: { xs: "block", md: "none" }, 
     position: "absolute",
-    top: 3,
+    top: 2,
     left: 10,
     zIndex: 10,
-    bgcolor: "background.paper",
-    color: "#352befa5",
+    bgcolor: "white",
+    color: "black",
     boxShadow: 1,
     "&:hover": {
-      bgcolor: "primary.light",
-      color: "white",
+      bgcolor: "primary",
+      color: "black",
     },
   }}
 >
