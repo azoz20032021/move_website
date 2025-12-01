@@ -4,6 +4,7 @@ import Home from "./Home";
 import Popular from "./Popular";
 import Top from "./Top";
 import MovieDetail from "./MovieDetail";
+import Header from "./Header";
 
 export default function App() {
   return (

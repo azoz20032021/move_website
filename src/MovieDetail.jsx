@@ -94,8 +94,10 @@ export default function MovieDetail() {
     : null;
 
   return (
+    
+    
     <div className="details">
-      <Link to="/">⬅ Back</Link>
+          <Link to="/">⬅ Back</Link>
 
       <div className="details-layout">
         <div>

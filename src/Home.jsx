@@ -13,9 +13,9 @@ const TOKEN = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMWVkYWUyMjMyMTUzZGYxYTMyM
 export default function Home() {
   const [movies, setMovies] = useState([]);
   const [query, setQuery] = useState("");
-  const [menuOpen, setMenuOpen] = useState(false);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     async function fetchMovies() {
@@ -46,48 +46,47 @@ export default function Home() {
     fetchMovies();
   }, [query, page]);
   return (
-    <div className="app">
-      <header className="header">
-        <IconButton
-  onClick={() => setMenuOpen(!menuOpen)}
-  color="secondary"
-  sx={{
-    display: { xs: "block", md: "none" }, 
-    position: "absolute",
-    top: 1.67,
-    left: 10,
-    zIndex: 10,
-    bgcolor: "white",
-    color: "black",
-    boxShadow: 1,
-    "&:hover": {
-      bgcolor: "primary",
-      color: "black",
-    },
-  }}
->
-  {menuOpen ? <CloseIcon /> : <MenuIcon />}
-</IconButton>
-
-        <nav className={`menu ${menuOpen ? "open" : ""}`}>
-          <Link to="/" className="menu-item">
-            Home
-          </Link>
-          <Link to="/Popular" className="menu-item">
-            Popular
-          </Link>
-          <Link to="/Top" className="menu-item">
-            Movies You May Like
-          </Link>
-        </nav>
-        <div className="logo-title">
-          <span className="logo" role="img" aria-label="logo">
-            🎬
-          </span>
-          <span className="title-text">Movie App</span>
-        </div>
-      </header>
-
+          <div className="app">
+            <header className="header">
+                  <IconButton
+        onClick={() => setMenuOpen(!menuOpen)}
+        color="secondary"
+        sx={{
+          display: { xs: "block", md: "none" }, 
+          position: "absolute",
+          top: 2,
+          left: 10,
+          zIndex: 10,
+          bgcolor: "white",
+          color: "black",
+          boxShadow: 1,
+          "&:hover": {
+            bgcolor: "primary",
+            color: "black",
+          },
+        }}
+      >
+        {menuOpen ? <CloseIcon /> : <MenuIcon />}
+      </IconButton>
+              <nav className={`menu ${menuOpen ? "open" : ""}`}>
+                <Link to="/" className="menu-item">
+                  Home
+                </Link>
+                <Link to="/Popular" className="menu-item">
+                  Popular
+                </Link>
+                <Link to="/Top" className="menu-item">
+                  Movies You May Like
+                </Link>
+              </nav>
+              <div className="logo-title">
+                <span className="logo" role="img" aria-label="logo">
+                  🎬
+                </span>
+                <span className="title-text">Movie App</span>
+              </div>
+            </header>
+      
       <input
         type="text"
         className="search"

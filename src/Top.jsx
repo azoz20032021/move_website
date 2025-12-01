@@ -52,7 +52,7 @@ export default function Top() {
   onClick={() => setMenuOpen(!menuOpen)}
   color="secondary"
   sx={{
-   display: { xs: "block", md: "none" }, 
+    display: { xs: "block", md: "none" }, 
     position: "absolute",
     top: 2,
     left: 10,
